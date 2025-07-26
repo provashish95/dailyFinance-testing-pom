@@ -1,3 +1,4 @@
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -9,12 +10,14 @@ public class SignupTestRunner extends Setup {
         driver.findElement(By.partialLinkText("Register")).click();
         SignUpPage signUpPage = new SignUpPage(driver);
 
-        String firstName = "Provashish";
-        String lastName = "Roy";
-        String email = "provashish@gmail.com";
+        Faker faker = new Faker();
+
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String email = "provashishroy"+Util.generateRandomNumber(100,999)+"@gmail.com";
         String password = "1234";
-        String phoneNumber = "01632544810";
-        String address =  "Dhaka";
+        String phoneNumber = "0163"+Util.generateRandomNumber(10000000, 99999999);
+        String address =  faker.address().fullAddress();
 
         signUpPage.signup(firstName, lastName, email, password, phoneNumber, address);
 

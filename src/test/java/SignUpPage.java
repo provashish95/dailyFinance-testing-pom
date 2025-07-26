@@ -39,7 +39,5 @@ public class SignUpPage {
         rbGender.get(0).click();
         chkTerms.click();
         btnRegister.click();
-
-
     }
 }

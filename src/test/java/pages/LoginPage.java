@@ -17,12 +17,12 @@ public class LoginPage {
     WebElement btnElement;
 
 
-    public  LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
 
     }
 
-    public void adminLogin(String email,String password){
+    public void userLogin(String email, String password) {
         txtEmail.sendKeys(email);
         txtPassword.sendKeys(password);
         btnElement.click();

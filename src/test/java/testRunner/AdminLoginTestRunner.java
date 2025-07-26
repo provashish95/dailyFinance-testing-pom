@@ -1,6 +1,11 @@
+package testRunner;
+
+import config.Setup;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.DashboardPage;
+import pages.LoginPage;
 
 public class AdminLoginTestRunner extends Setup {
 
@@ -14,9 +19,16 @@ public class AdminLoginTestRunner extends Setup {
         Assert.assertEquals(txtHeaderActual, txtHeaderExpected);
     }
 
-    @Test(priority = 1, description = "Admin can logout successfully")
-    public void logout() {
-        DashboardPage dashboardPage = new DashboardPage(driver);
+    @Test(priority = 2, description = "Get user firstname")
+    public void viewProfile() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.findElements(By.tagName("button")).get(1).click();
+        String name= driver.findElement(By.name("firstName")).getAttribute("Value"); //get value from disabled text
+        System.out.println(name);
+    }
+    @Test(priority = 3, description = "Admin can logout successfully")
+    public void logout(){
+        DashboardPage dashboardPage=new DashboardPage(driver);
         dashboardPage.doLogout();
     }
 }

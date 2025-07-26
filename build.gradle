@@ -18,6 +18,12 @@ dependencies {
     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 }
 
-test {
-    useJUnitPlatform()
+//test {
+//    useJUnitPlatform()
+//}
+
+test{
+    useTestNG(){
+        suites"./src/test/resources/suit.xml"
+    }
 }

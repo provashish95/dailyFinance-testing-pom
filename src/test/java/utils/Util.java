@@ -1,3 +1,4 @@
+package utils;
 
 public class Util {
     public static int generateRandomNumber(int min, int max) {

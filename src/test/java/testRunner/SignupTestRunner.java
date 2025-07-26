@@ -2,16 +2,19 @@ package testRunner;
 
 import com.github.javafaker.Faker;
 import config.Setup;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pages.SignUpPage;
 import utils.Util;
 
+import java.io.IOException;
+
 public class SignupTestRunner extends Setup {
 
     @Test(priority = 1, description = "User registration complete")
 
-    public void doSignup(){
+    public void doSignup() throws IOException, ParseException {
         driver.findElement(By.partialLinkText("Register")).click();
         SignUpPage signUpPage = new SignUpPage(driver);
 
@@ -27,5 +30,7 @@ public class SignupTestRunner extends Setup {
 
         signUpPage.signup(firstName, lastName, email, password, phoneNumber, address);
 
+        //Save users data to json file
+        Util.saveUserData(firstName, lastName, email, password, phoneNumber, address);
     }
 }

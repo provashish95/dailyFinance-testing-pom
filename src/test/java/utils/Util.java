@@ -1,5 +1,6 @@
 package utils;
 
+import config.UserModel;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,22 +17,23 @@ public class Util {
         return (int) randomNumber;
     }
 
-    public static void saveUserData(String firstName, String lastName, String email, String password,String phoneNumber, String address) throws IOException, ParseException {
+    public static void saveUserData(JSONObject jsonObject, String jsonFilePath) throws IOException, ParseException {
 
-        String url = "./src/test/resources/users.json";
+       // String url = "./src/test/resources/users.json";
         JSONParser jsonParser = new JSONParser();
-        JSONArray jsonArray = (JSONArray) jsonParser.parse(new FileReader(url));
+        JSONArray jsonArray = (JSONArray) jsonParser.parse(new FileReader(jsonFilePath));
 
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("firstName", firstName);
-        jsonObject.put("lastName", lastName);
-        jsonObject.put("email", email);
-        jsonObject.put("password", password);
-        jsonObject.put("phoneNumber", phoneNumber);
-        jsonObject.put("address", address);
+//        JSONObject jsonObject = new JSONObject();
+
+//        jsonObject.put("firstName", firstName);
+//        jsonObject.put("lastName", lastName);
+//        jsonObject.put("email", email);
+//        jsonObject.put("password", password);
+//        jsonObject.put("phoneNumber", phoneNumber);
+//        jsonObject.put("address", address);
 
         jsonArray.add(jsonObject);
-        FileWriter fw = new FileWriter(url);
+        FileWriter fw = new FileWriter(jsonFilePath);
         fw.write(jsonArray.toJSONString());
         fw.flush();
         fw.close();

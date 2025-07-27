@@ -9,23 +9,23 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SignUpPage {
-    @FindBy(id="firstName")
+    @FindBy(id = "firstName")
     WebElement txtFirstName;
-    @FindBy(id="lastName")
+    @FindBy(id = "lastName")
     WebElement txtLastName;
-    @FindBy(id="email")
+    @FindBy(id = "email")
     WebElement txtEmail;
-    @FindBy(id="password")
+    @FindBy(id = "password")
     WebElement txtPassword;
     @FindBy(id = "phoneNumber")
     WebElement txtPhoneNumber;
-    @FindBy(id="address")
+    @FindBy(id = "address")
     WebElement txtAddress;
     @FindBy(css = "[type=radio]")
     List<WebElement> rbGender;
     @FindBy(css = "[type=checkbox]")
     WebElement chkTerms;
-    @FindBy(id="register")
+    @FindBy(id = "register")
     WebElement btnRegister;
 
     public SignUpPage(WebDriver driver) {
@@ -34,11 +34,11 @@ public class SignUpPage {
 
     public void signup(UserModel userModel) {
         txtFirstName.sendKeys(userModel.getFirstName());
-        txtLastName.sendKeys(userModel.getLastName()!= null ? userModel.getLastName() : " ");
+        txtLastName.sendKeys(userModel.getLastName() != null ? userModel.getLastName() : " ");
         txtEmail.sendKeys(userModel.getEmail());
         txtPassword.sendKeys(userModel.getPassword());
         txtPhoneNumber.sendKeys(userModel.getPhoneNumber());
-        txtAddress.sendKeys(userModel.getAddress() != null ? userModel.getAddress():"");
+        txtAddress.sendKeys(userModel.getAddress() != null ? userModel.getAddress() : "");
         rbGender.get(0).click();
         chkTerms.click();
         btnRegister.click();

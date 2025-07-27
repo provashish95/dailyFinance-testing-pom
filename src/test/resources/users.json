@@ -30,5 +30,49 @@
     "phoneNumber": "016398806599",
     "address": "896 Chara Extensions, East Randal, SC 28548-4731",
     "email": "provashishroy759@gmail.com"
+  },
+  {
+    "firstName": "Tashina",
+    "password": "1234",
+    "phoneNumber": "016310872441",
+    "email": "provashishroy873@gmail.com"
+  },
+  {
+    "firstName": "Antionette",
+    "lastName": "Boyle",
+    "password": "1234",
+    "phoneNumber": "016329229837",
+    "address": "5169 Kreiger Place, West Todd, KS 62121-6354",
+    "email": "provashishroy982@gmail.com"
+  },
+  {
+    "firstName": "Teresa",
+    "lastName": "Marks",
+    "password": "1234",
+    "phoneNumber": "016376621545",
+    "address": "04522 Daphne Dam, Lake Shanika, ID 76524-3101",
+    "email": "provashishroy922@gmail.com"
+  },
+  {
+    "firstName": "Will",
+    "lastName": "Lueilwitz",
+    "password": "1234",
+    "phoneNumber": "016379304003",
+    "address": "Apt. 063 605 Jazmin Forks, Handmouth, ND 75137",
+    "email": "provashishroy221@gmail.com"
+  },
+  {
+    "firstName": "Reed",
+    "lastName": "Harvey",
+    "password": "1234",
+    "phoneNumber": "016355738811",
+    "address": "Suite 804 367 Ondricka Ridge, West Kaylee, NY 40224-5849",
+    "email": "provashishroy166@gmail.com"
+  },
+  {
+    "firstName": "Nelly",
+    "password": "1234",
+    "phoneNumber": "016366465516",
+    "email": "provashishroy696@gmail.com"
   }
 ]

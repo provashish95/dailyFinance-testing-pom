@@ -6,5 +6,29 @@
     "phoneNumber": "016331405339",
     "address": "1521 Cliff Drives, East Virgilview, NY 94225-8246",
     "email": "provashishroy669@gmail.com"
+  },
+  {
+    "firstName": "Cole",
+    "lastName": "Donnelly",
+    "password": "1234",
+    "phoneNumber": "016345139580",
+    "address": "39848 Elwood Estate, West Abramborough, NC 89500-7897",
+    "email": "provashishroy180@gmail.com"
+  },
+  {
+    "firstName": "Rusty",
+    "lastName": "Schaden",
+    "password": "1234",
+    "phoneNumber": "016337605002",
+    "address": "Apt. 180 59252 Simonis Station, New Anibal, CO 15462-1989",
+    "email": "provashishroy820@gmail.com"
+  },
+  {
+    "firstName": "Shawana",
+    "lastName": "Terry",
+    "password": "1234",
+    "phoneNumber": "016398806599",
+    "address": "896 Chara Extensions, East Randal, SC 28548-4731",
+    "email": "provashishroy759@gmail.com"
   }
 ]

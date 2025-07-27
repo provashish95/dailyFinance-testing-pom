@@ -1,5 +1,6 @@
 package pages;
 
+import config.UserModel;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,13 +32,13 @@ public class SignUpPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void signup(String firstName, String lastName, String email, String password, String phoneNumber, String address) {
-        txtFirstName.sendKeys(firstName);
-        txtLastName.sendKeys(lastName);
-        txtEmail.sendKeys(email);
-        txtPassword.sendKeys(password);
-        txtPhoneNumber.sendKeys(phoneNumber);
-        txtAddress.sendKeys(address);
+    public void signup(UserModel userModel) {
+        txtFirstName.sendKeys(userModel.getFirstName());
+        txtLastName.sendKeys(userModel.getLastName()!= null ? userModel.getLastName() : " ");
+        txtEmail.sendKeys(userModel.getEmail());
+        txtPassword.sendKeys(userModel.getPassword());
+        txtPhoneNumber.sendKeys(userModel.getPhoneNumber());
+        txtAddress.sendKeys(userModel.getAddress() != null ? userModel.getAddress():"");
         rbGender.get(0).click();
         chkTerms.click();
         btnRegister.click();
